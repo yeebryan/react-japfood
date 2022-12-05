@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// here is the base js
+// import components in like aboutus.js
+import React from 'react'; // import React
+import './App.css'; // import css
+import AboutUs from './components/AboutUs';
+import Hero from './components/Hero';
+import Nav from './components/Nav';
 
+// create and update App function with some html
+// react.fragment makes it easier/efficient to write multiple element
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+        <div className='App'>
+          <Nav />
+          <Hero />
+          <AboutUs />
+        </div>
+    </React.Fragment>
+    );
 }
+// anything in {} is javascript 
 
 export default App;
+
+// A React app consists of various components - a component
+// essentially a function that will return HTML output
+// The App component is what React app will display when u run it
